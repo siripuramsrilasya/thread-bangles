@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Successful - Thread Bangles</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>Thread Bangles</h2>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">🛒 Cart</a>
+        <a href="wishlist.html" id="wishlist-link">❤️ Wishlist</a>
+    </nav>
+
+    <section class="success-section">
+
+        <div class="success-box">
+
+            <h1>🎉 Order Placed Successfully!</h1>
+
+            <p>Thank you for shopping with Thread Bangles ❤️</p>
+
+            <p>Your order has been received.</p>
+
+            <p id="order-id"></p>
+
+            <a href="index.html" class="checkout-btn">
+                Continue Shopping 🛍️
+            </a>
+
+            <a href="cart.html" class="success-cart-btn">
+                View Cart 🛒
+            </a>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        let orderId = localStorage.getItem("orderId");
+
+        document.getElementById("order-id").innerText =
+            "Your Order ID: " + orderId;
+    </script>
+
+</body>
+
+</html>
