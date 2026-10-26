@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,38 +12,60 @@
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
-        <div class="logo">THREAD BANGLES</div>
+
+        <div class="logo">
+            THREAD BANGLES
+        </div>
 
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Shop</a>
+            <a href="index.html">Home</a>
+            <a href="#shop">Shop</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="cart.html">🛒 Cart</a>
-            <a href="wishlist.html" id="wishlist-link">❤️ Wishlist</a>
+            <a href="wishlist.html" id="wishlist-link">
+                ❤️ Wishlist
+            </a>
         </nav>
+
     </header>
+
+
+    <!-- HERO -->
 
     <section class="hero">
 
         <div class="hero-content">
-            <h1>Beautiful Thread Bangles</h1>
+
+            <h1>
+                Beautiful Thread Bangles
+            </h1>
 
             <p>
                 Handcrafted with love, tradition and elegance.
             </p>
 
             <a href="#shop">
-                <button>Shop Now</button>
+                <button>
+                    Shop Now
+                </button>
             </a>
+
         </div>
 
     </section>
 
+
+    <!-- WELCOME -->
+
     <section class="welcome">
 
-        <h2>Welcome to Thread Bangles</h2>
+        <h2>
+            Welcome to Thread Bangles
+        </h2>
 
         <p>
             Discover beautiful handmade thread bangles
@@ -51,261 +74,525 @@
 
     </section>
 
+
+    <!-- WHY CHOOSE US -->
+
     <section class="featured">
 
-    <h2>Why Choose Thread Bangles?</h2>
-
-    <div class="featured-container">
+        <h2>
+            Why Choose Thread Bangles?
+        </h2>
 
-        <div class="featured-card">
-            <div class="featured-icon">✨</div>
-            <h3>Handcrafted</h3>
-            <p>
-                Each bangle is carefully designed
-                with beautiful thread work.
-            </p>
-        </div>
+        <div class="featured-container">
 
-        <div class="featured-card">
-            <div class="featured-icon">🌸</div>
-            <h3>Traditional</h3>
-            <p>
-                Inspired by beautiful Indian
-                traditional designs.
-            </p>
-        </div>
+            <div class="featured-card">
 
-        <div class="featured-card">
-            <div class="featured-icon">💕</div>
-            <h3>Made With Love</h3>
-            <p>
-                Created to make your special
-                occasions even more beautiful.
-            </p>
-        </div>
+                <div class="featured-icon">
+                    ✨
+                </div>
 
-    </div>
+                <h3>
+                    Handcrafted
+                </h3>
 
-    </section>
-    <!-- Shop Section -->
+                <p>
+                    Each bangle is carefully designed
+                    with beautiful thread work.
+                </p>
 
-    <section class="shop" id="shop">
+            </div>
 
-    <h2>Our Collection</h2>
 
-    <p class="shop-subtitle">
-        Explore our beautiful handmade thread bangles
-    </p>
+            <div class="featured-card">
 
-    <div class="shop-search">
+                <div class="featured-icon">
+                    🌸
+                </div>
 
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Search for a bangle..."
-        onkeyup="searchProducts()"
-    >
+                <h3>
+                    Traditional
+                </h3>
 
-    <span>🔍</span>
+                <p>
+                    Inspired by beautiful Indian
+                    traditional designs.
+                </p>
 
-    </div>
+            </div>
 
-    <div class="category-filters">
 
-    <button onclick="filterProducts('all')">
-        All
-    </button>
+            <div class="featured-card">
 
-    <button onclick="filterProducts('maroon')">
-        Maroon
-    </button>
+                <div class="featured-icon">
+                    💕
+                </div>
 
-    <button onclick="filterProducts('red')">
-        Red
-    </button>
+                <h3>
+                    Made With Love
+                </h3>
 
-    <button onclick="filterProducts('colorful')">
-        Colorful
-    </button>
-
-    </div>
-
-    <p id="no-products" class="no-products">
-        No products found.
-    </p>
-    <div class="product-container">
-
-        <div class="product-card">
-
-            <img src="https://leshya.com/cdn/shop/products/LSHTH01MAROON_480x480%402x.jpg?v=1663841456"
-     alt="Maroon Thread Bangles">
-            <h3>Royal Maroon Bangle</h3>
-
-            <p>₹499</p>
-
-            <button onclick="addToCart('Royal Maroon Bangle', 499)">
-                Add to Cart
-            </button>
-            <a href="product.html">
-                <button>View Product</button>
-            </a>
-
-            <button class="wishlist-btn" onclick="addToWishlist('Royal Maroon Bangle')">
-                ❤️ Wishlist
-            </button>
-        </div>
-
-
-        <div class="product-card">
-
-            <img src="https://cdn.shopaccino.com/swadescreations/products/whatsapp-image-2024-11-25-at-15614-pm-428704006885878_l.jpeg?v=681"
-     alt="Red Silk Thread Bangles">
-            <h3>Red Silk Thread Bangle</h3>
-
-            <p>₹599</p>
-
-            <button onclick="addToCart('Red Silk Thread Bangle', 599)">
-                Add to Cart
-            </button>
-            <a href="product2.html">
-                <button>View Product</button>
-            </a>
-
-            <button class="wishlist-btn" onclick="addToWishlist('Red Silk Thread Bangle')">
-                ❤️ Wishlist
-            </button>
-            
-        </div>
-
-
-        <div class="product-card">
-
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrD7OEE85EnMnHelswh85pWkbNr3637olWI6x-jIoLP7prZKGv7x-lF4M&s=10" alt="colorful thread bangles">
-
-            <h3>Colorful Thread Bangle</h3>
-
-            <p>₹449</p>
-
-            <button onclick="addToCart('Colorful Thread Bangles', 449)">
-                Add to Cart
-            </button>
-            <a href="product3.html">
-                <button>View Product</button>
-            </a>
-            
-            <button class="wishlist-btn" onclick="addToWishlist('Colorful Thread Bangles')">
-                ❤️ Wishlist
-            </button>
-        </div>
-
-    </div>
-
-    </section>
-
-    <section class="reviews-section">
-
-    <h1>💬 Customer Reviews</h1>
-
-    <div class="reviews-container">
-
-        <div class="review-card">
-            <h3>Priya ⭐⭐⭐⭐⭐</h3>
-            <p>"Beautiful bangles and excellent quality!"</p>
-        </div>
-
-        <div class="review-card">
-            <h3>Ananya ⭐⭐⭐⭐⭐</h3>
-            <p>"The design is so pretty. I loved it! ❤️"</p>
-        </div>
-
-        <div class="review-card">
-            <h3>Meera ⭐⭐⭐⭐</h3>
-            <p>"Very nice collection and lovely colors."</p>
-        </div>
-
-    </div>
-
-    </section>
-
-
-    <section class="support-section">
-
-    <h1>📞 Need Help?</h1>
-
-    <p>Have questions about our bangles or your order?</p>
-
-    <a href="contact.html" class="support-btn">
-        Contact Us 💌
-    </a>
-
-    </section>
-    <footer class="main-footer">
-
-    <div class="footer-container">
-
-        <div class="footer-about">
-
-            <h2>THREAD BANGLES</h2>
-
-            <p>
-                Beautiful handcrafted thread bangles
-                made to celebrate every special moment.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h3>Quick Links</h3>
-
-            <a href="index.html">Home</a>
-            <a href="index.html#shop">Shop</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-
-        </div>
-
-
-        <div class="footer-contact">
-
-            <h3>Contact Us</h3>
-
-            <p>📧 threadbangles@gmail.com</p>
-            <p>📱 +91 98765 43210</p>
-            <p>📍 Hyderabad, India</p>
-
-        </div>
-
-
-        <div class="footer-social">
-
-            <h3>Follow Us</h3>
-
-            <div class="social-icons">
-
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-                <a href="#">Pinterest</a>
+                <p>
+                    Created to make your special
+                    occasions even more beautiful.
+                </p>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="footer-bottom">
+    <!-- BEST SELLERS -->
+
+    <section class="featured-section">
+
+        <h1>
+            ✨ Best Sellers ✨
+        </h1>
 
         <p>
-            © 2026 Thread Bangles. All Rights Reserved.
+            Our most-loved handcrafted thread bangles
         </p>
 
-    </div>
+        <a href="#shop" class="featured-btn">
+            Shop Now 🛍️
+        </a>
+
+    </section>
+
+
+    <!-- SHOP -->
+
+    <section class="shop" id="shop">
+
+        <h2>
+            Our Collection
+        </h2>
+
+        <p class="shop-subtitle">
+            Explore our beautiful handmade thread bangles
+        </p>
+
+
+        <!-- SEARCH -->
+
+        <div class="shop-search">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a bangle..."
+                onkeyup="searchProducts()"
+            >
+
+            <span>
+                🔍
+            </span>
+
+        </div>
+
+
+        <!-- CATEGORY FILTERS -->
+
+        <div class="category-filters">
+
+            <button onclick="filterProducts('all')">
+                All
+            </button>
+
+            <button onclick="filterProducts('maroon')">
+                Maroon
+            </button>
+
+            <button onclick="filterProducts('red')">
+                Red
+            </button>
+
+            <button onclick="filterProducts('colorful')">
+                Colorful
+            </button>
+
+        </div>
+
+
+        <!-- NO PRODUCTS -->
+
+        <p id="no-products" class="no-products">
+            No products found.
+        </p>
+
+
+        <!-- PRODUCTS -->
+
+        <div class="product-container">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div
+                class="product-card"
+                data-category="maroon"
+            >
+
+                <img
+                    src="images/maroon-bangle.jpeg"
+                    alt="Royal Maroon Bangle"
+                >
+
+                <h3>
+                    Royal Maroon Bangle
+                </h3>
+
+                <p>
+                    ₹499
+                </p>
+
+                <button
+                    onclick="addToCart('Royal Maroon Bangle', 499)"
+                >
+                    Add to Cart
+                </button>
+
+                <a href="product.html">
+                    <button>
+                        View Product
+                    </button>
+                </a>
+
+                <button
+                    class="wishlist-btn"
+                    onclick="addToWishlist('Royal Maroon Bangle')"
+                >
+                    ❤️ Wishlist
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div
+                class="product-card"
+                data-category="red"
+            >
+
+                <img
+                    src="images/red-bangle.jpeg"
+                    alt="Red Silk Thread Bangle"
+                >
+
+                <h3>
+                    Red Silk Thread Bangle
+                </h3>
+
+                <p>
+                    ₹599
+                </p>
+
+                <button
+                    onclick="addToCart('Red Silk Thread Bangle', 599)"
+                >
+                    Add to Cart
+                </button>
+
+                <a href="product2.html">
+                    <button>
+                        View Product
+                    </button>
+                </a>
+
+                <button
+                    class="wishlist-btn"
+                    onclick="addToWishlist('Red Silk Thread Bangle')"
+                >
+                    ❤️ Wishlist
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div
+                class="product-card"
+                data-category="colorful"
+            >
+
+                <img
+                    src="images/colorful-bangles.jpeg"
+                    alt="Colorful Thread Bangles"
+                >
+
+                <h3>
+                    Colorful Thread Bangles
+                </h3>
+
+                <p>
+                    ₹449
+                </p>
+
+                <button
+                    onclick="addToCart('Colorful Thread Bangles', 449)"
+                >
+                    Add to Cart
+                </button>
+
+                <a href="product3.html">
+                    <button>
+                        View Product
+                    </button>
+                </a>
+
+                <button
+                    class="wishlist-btn"
+                    onclick="addToWishlist('Colorful Thread Bangles')"
+                >
+                    ❤️ Wishlist
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div
+                class="product-card"
+                data-category="colorful"
+            >
+
+                <img
+                    src="images/golden-red-bangles.jpeg"
+                    alt="Golden Red Thread Bangles"
+                >
+
+                <h3>
+                    Golden Red Thread Bangles
+                </h3>
+
+                <p>
+                    ₹499
+                </p>
+
+                <button
+                    onclick="addToCart('Golden Red Thread Bangles', 499)"
+                >
+                    Add to Cart
+                </button>
+
+                <a href="product4.html">
+                    <button>
+                        View Product
+                    </button>
+                </a>
+
+                <button
+                    class="wishlist-btn"
+                    onclick="addToWishlist('Golden Red Thread Bangles')"
+                >
+                    ❤️ Wishlist
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- REVIEWS -->
+
+    <section class="reviews-section">
+
+        <h1>
+            💬 Customer Reviews
+        </h1>
+
+        <div class="reviews-container">
+
+            <div class="review-card">
+
+                <h3>
+                    Priya ⭐⭐⭐⭐⭐
+                </h3>
+
+                <p>
+                    "Beautiful bangles and excellent quality!"
+                </p>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <h3>
+                    Ananya ⭐⭐⭐⭐⭐
+                </h3>
+
+                <p>
+                    "The design is so pretty. I loved it! ❤️"
+                </p>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <h3>
+                    Meera ⭐⭐⭐⭐
+                </h3>
+
+                <p>
+                    "Very nice collection and lovely colors."
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUPPORT -->
+
+    <section class="support-section">
+
+        <h1>
+            📞 Need Help?
+        </h1>
+
+        <p>
+            Have questions about our bangles or your order?
+        </p>
+
+        <a
+            href="contact.html"
+            class="support-btn"
+        >
+            Contact Us 💌
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <h2>
+                    THREAD BANGLES
+                </h2>
+
+                <p>
+                    Beautiful handcrafted thread bangles
+                    made to celebrate every special moment.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#shop">
+                    Shop
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    📧 lavanyasiripuram1911@gmail.com
+                </p>
+
+                <p>
+                    📱 +91 9290020050
+                </p>
+
+                <p>
+                    📍 Hyderabad, India
+                </p>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>
+                    Follow Us
+                </h3>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        Instagram
+                    </a>
+
+                    <a href="#">
+                        Facebook
+                    </a>
+
+                    <a href="#">
+                        Pinterest
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Thread Bangles. All Rights Reserved.
+            </p>
+
+        </div>
 
     </footer>
+
+
+    <!-- BACK TO TOP -->
+
+    <button
+        class="back-to-top"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    >
+        ⬆️ Top
+    </button>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>

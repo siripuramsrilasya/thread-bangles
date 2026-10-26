@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Golden Red Thread Bangles - Thread Bangles</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">THREAD BANGLES</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#shop">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="cart.html">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </a>
+
+        <a href="wishlist.html" id="wishlist-link">
+            ❤️ Wishlist (0)
+        </a>
+    </nav>
+</header>
+
+
+<section class="product-detail">
+
+    <div class="product-detail-image">
+        <img src="images/golden-red-bangles.jpeg"
+             alt="Golden Red Thread Bangles">
+    </div>
+
+
+    <div class="product-detail-info">
+
+        <h1>Golden Red Thread Bangles</h1>
+
+        <h2>₹499</h2>
+
+        <p class="product-description">
+            Beautifully handcrafted golden red thread bangles with an
+            elegant traditional design. Perfect for festivals, weddings
+            and special occasions.
+        </p>
+
+        <ul class="product-features">
+            <li>✨ Handmade design</li>
+            <li>✨ Comfortable to wear</li>
+            <li>✨ Elegant traditional look</li>
+        </ul>
+
+
+        <div class="quantity-box">
+
+            <button onclick="changeQuantity(-1)">−</button>
+
+            <span id="quantity">1</span>
+
+            <button onclick="changeQuantity(1)">+</button>
+
+        </div>
+
+
+        <button
+            class="detail-add-cart"
+            onclick="addProductToCart()">
+            Add to Cart 🛒
+        </button>
+
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+<script>
+
+let quantity = 1;
+
+function changeQuantity(amount) {
+
+    quantity += amount;
+
+    if (quantity < 1) {
+        quantity = 1;
+    }
+
+    document.getElementById("quantity").innerText = quantity;
+}
+
+
+function addProductToCart() {
+
+    for (let i = 0; i < quantity; i++) {
+        addToCart("Golden Red Thread Bangles", 499);
+    }
+
+    alert("Golden Red Thread Bangles added to cart! 🛍️");
+}
+
+</script>
+
+</body>
+</html>

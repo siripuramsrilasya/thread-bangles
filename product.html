@@ -1,90 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Product - Thread Bangles</title>
+    <title>Royal Maroon Bangle - Thread Bangles</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
+<header>
+    <div class="logo">THREAD BANGLES</div>
 
-        <div class="logo">THREAD BANGLES</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#shop">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html#shop">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="cart.html">🛒 Cart</a>
-            <a href="wishlist.html" id="wishlist-link">❤️ Wishlist</a>
-        </nav>
+        <a href="cart.html">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </a>
 
-    </header>
-
-
-    <section class="product-details">
-
-        <div class="product-image">
-
-            <img
-                src="https://leshya.com/cdn/shop/products/LSHTH01MAROON_480x480%402x.jpg?v=1663841456"
-                alt="Maroon Thread Bangle">
-
-        </div>
+        <a href="wishlist.html" id="wishlist-link">
+            ❤️ Wishlist (0)
+        </a>
+    </nav>
+</header>
 
 
-        <div class="product-info">
+<section class="product-detail">
 
-            <h1>Royal Maroon Bangle</h1>
-
-            <h2>₹499</h2>
-
-            <p>
-                Beautifully handcrafted thread bangles
-                designed with traditional Indian style.
-                Perfect for festivals, weddings and special occasions.
-            </p>
-
-            <p>
-                ✨ Handmade design<br>
-                ✨ Comfortable to wear<br>
-                ✨ Elegant traditional look
-            </p>
-
-            <div class="product-quantity">
-
-                <button onclick="decreaseProduct()">
-                    −
-                </button>
-
-                <span id="product-quantity">
-                    1
-                </span>
-
-                <button onclick="increaseProduct()">
-                    +
-                </button>
-
-            </div>
+    <div class="product-detail-image">
+        <img src="images/maroon-bangle.jpeg" alt="Royal Maroon Bangle">
+    </div>
 
 
-            <button onclick="addProductToCart()">
-                Add to Cart
-            </button>
+    <div class="product-detail-info">
+
+        <h1>Royal Maroon Bangle</h1>
+
+        <h2>₹499</h2>
+
+        <p class="product-description">
+            Beautifully handcrafted thread bangles designed with traditional
+            Indian style. Perfect for festivals, weddings and special occasions.
+        </p>
+
+        <ul class="product-features">
+            <li>✨ Handmade design</li>
+            <li>✨ Comfortable to wear</li>
+            <li>✨ Elegant traditional look</li>
+        </ul>
+
+
+        <div class="quantity-box">
+
+            <button onclick="changeQuantity(-1)">−</button>
+
+            <span id="quantity">1</span>
+
+            <button onclick="changeQuantity(1)">+</button>
 
         </div>
 
-    </section>
+
+        <button
+            class="detail-add-cart"
+            onclick="addProductToCart()">
+            Add to Cart 🛒
+        </button>
+
+    </div>
+
+</section>
 
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
+<script>
+
+let quantity = 1;
+
+function changeQuantity(amount) {
+
+    quantity += amount;
+
+    if (quantity < 1) {
+        quantity = 1;
+    }
+
+    document.getElementById("quantity").innerText = quantity;
+}
+
+
+function addProductToCart() {
+
+    for (let i = 0; i < quantity; i++) {
+        addToCart("Royal Maroon Bangle", 499);
+    }
+
+    alert("Royal Maroon Bangle added to cart! 🛍️");
+}
+
+</script>
 
 </body>
-
 </html>

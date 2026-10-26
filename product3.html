@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,81 +11,102 @@
 
 <body>
 
-    <header>
+<header>
+    <div class="logo">THREAD BANGLES</div>
 
-        <div class="logo">THREAD BANGLES</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#shop">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html#shop">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="cart.html">🛒 Cart</a>
-            <a href="wishlist.html" id="wishlist-link">❤️ Wishlist</a>
-        </nav>
+        <a href="cart.html">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </a>
 
-    </header>
-
-
-    <section class="product-details">
-
-        <div class="product-image">
-
-            <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrD7OEE85EnMnHelswh85pWkbNr3637olWI6x-jIoLP7prZKGv7x-lF4M&s=10"
-                alt="Colorful Thread Bangles">
-
-        </div>
+        <a href="wishlist.html" id="wishlist-link">
+            ❤️ Wishlist (0)
+        </a>
+    </nav>
+</header>
 
 
-        <div class="product-info">
+<section class="product-detail">
 
-            <h1>Colorful Thread Bangles</h1>
-
-            <h2>₹449</h2>
-
-            <p>
-                Beautiful colorful thread bangles designed
-                with a vibrant traditional look. Perfect for
-                festivals, celebrations and everyday wear.
-            </p>
-
-            <p>
-                ✨ Handmade design<br>
-                ✨ Vibrant colors<br>
-                ✨ Comfortable to wear<br>
-                ✨ Traditional style
-            </p>
+    <div class="product-detail-image">
+        <img src="images/colorful-bangles.jpeg" alt="Colorful Thread Bangles">
+    </div>
 
 
-            <div class="product-quantity">
+    <div class="product-detail-info">
 
-                <button onclick="changeColorfulQuantity(-1)">
-                    −
-                </button>
+        <h1>Colorful Thread Bangles</h1>
 
-                <span id="colorful-quantity">
-                    1
-                </span>
+        <h2>₹449</h2>
 
-                <button onclick="changeColorfulQuantity(1)">
-                    +
-                </button>
+        <p class="product-description">
+            Beautifully handcrafted colorful thread bangles with a bright
+            and attractive design. Perfect for festivals, celebrations
+            and special occasions.
+        </p>
 
-            </div>
+        <ul class="product-features">
+            <li>✨ Handmade design</li>
+            <li>✨ Comfortable to wear</li>
+            <li>✨ Beautiful colorful finish</li>
+        </ul>
 
 
-            <button onclick="addColorfulBangleToCart()">
-                Add to Cart
-            </button>
+        <div class="quantity-box">
+
+            <button onclick="changeQuantity(-1)">−</button>
+
+            <span id="quantity">1</span>
+
+            <button onclick="changeQuantity(1)">+</button>
 
         </div>
 
-    </section>
+
+        <button
+            class="detail-add-cart"
+            onclick="addProductToCart()">
+            Add to Cart 🛒
+        </button>
+
+    </div>
+
+</section>
 
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
+<script>
+
+let quantity = 1;
+
+function changeQuantity(amount) {
+
+    quantity += amount;
+
+    if (quantity < 1) {
+        quantity = 1;
+    }
+
+    document.getElementById("quantity").innerText = quantity;
+}
+
+
+function addProductToCart() {
+
+    for (let i = 0; i < quantity; i++) {
+        addToCart("Colorful Thread Bangles", 449);
+    }
+
+    alert("Colorful Thread Bangles added to cart! 🛍️");
+}
+
+</script>
 
 </body>
-
 </html>

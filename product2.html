@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,81 +11,101 @@
 
 <body>
 
-    <header>
+<header>
+    <div class="logo">THREAD BANGLES</div>
 
-        <div class="logo">THREAD BANGLES</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#shop">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html#shop">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="cart.html">🛒 Cart</a>
-            <a href="wishlist.html" id="wishlist-link">❤️ Wishlist</a>
-        </nav>
+        <a href="cart.html">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </a>
 
-    </header>
-
-
-    <section class="product-details">
-
-        <div class="product-image">
-
-            <img
-                src="https://cdn.shopaccino.com/swadescreations/products/whatsapp-image-2024-11-25-at-15614-pm-428704006885878_l.jpeg?v=681"
-                alt="Red Silk Thread Bangle">
-
-        </div>
+        <a href="wishlist.html" id="wishlist-link">
+            ❤️ Wishlist (0)
+        </a>
+    </nav>
+</header>
 
 
-        <div class="product-info">
+<section class="product-detail">
 
-            <h1>Red Silk Thread Bangle</h1>
-
-            <h2>₹599</h2>
-
-            <p>
-                A beautiful red silk thread bangle
-                with an elegant traditional design.
-                Perfect for festivals, weddings and
-                special occasions.
-            </p>
-
-            <p>
-                ✨ Handmade design<br>
-                ✨ Comfortable to wear<br>
-                ✨ Traditional Indian style
-            </p>
+    <div class="product-detail-image">
+        <img src="images/red-bangle.jpeg" alt="Red Silk Thread Bangle">
+    </div>
 
 
-            <div class="product-quantity">
+    <div class="product-detail-info">
 
-                <button onclick="changeProductQuantity(-1)">
-                    −
-                </button>
+        <h1>Red Silk Thread Bangle</h1>
 
-                <span id="product-quantity">
-                    1
-                </span>
+        <h2>₹599</h2>
 
-                <button onclick="changeProductQuantity(1)">
-                    +
-                </button>
+        <p class="product-description">
+            Beautifully handcrafted red silk thread bangles with an elegant
+            traditional design. Perfect for festivals, weddings and special occasions.
+        </p>
 
-            </div>
+        <ul class="product-features">
+            <li>✨ Handmade design</li>
+            <li>✨ Comfortable to wear</li>
+            <li>✨ Elegant traditional look</li>
+        </ul>
 
 
-            <button onclick="addRedBangleToCart()">
-                Add to Cart
-            </button>
+        <div class="quantity-box">
+
+            <button onclick="changeQuantity(-1)">−</button>
+
+            <span id="quantity">1</span>
+
+            <button onclick="changeQuantity(1)">+</button>
 
         </div>
 
-    </section>
+
+        <button
+            class="detail-add-cart"
+            onclick="addProductToCart()">
+            Add to Cart 🛒
+        </button>
+
+    </div>
+
+</section>
 
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
+<script>
+
+let quantity = 1;
+
+function changeQuantity(amount) {
+
+    quantity += amount;
+
+    if (quantity < 1) {
+        quantity = 1;
+    }
+
+    document.getElementById("quantity").innerText = quantity;
+}
+
+
+function addProductToCart() {
+
+    for (let i = 0; i < quantity; i++) {
+        addToCart("Red Silk Thread Bangle", 599);
+    }
+
+    alert("Red Silk Thread Bangle added to cart! 🛍️");
+}
+
+</script>
 
 </body>
-
 </html>
