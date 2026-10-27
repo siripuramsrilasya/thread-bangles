@@ -644,75 +644,62 @@ function displayCheckout() {
 
 function placeOrder() {
 
-    let name =
-        document.getElementById(
-            "customer-name"
-        ).value.trim();
+    let name = document.getElementById("customer-name").value.trim();
+    let phone = document.getElementById("customer-phone").value.trim();
+    let address = document.getElementById("customer-address").value.trim();
 
-
-    let phone =
-        document.getElementById(
-            "customer-phone"
-        ).value.trim();
-
-
-    let address =
-        document.getElementById(
-            "customer-address"
-        ).value.trim();
-
-
-    if (
-        name === "" ||
-        phone === "" ||
-        address === ""
-    ) {
-
-        alert(
-            "Please fill all delivery details."
-        );
-
+    // Check delivery details
+    if (name === "" || phone === "" || address === "") {
+        alert("Please fill all delivery details.");
         return;
-
     }
 
-
-    let cart =
-        JSON.parse(localStorage.getItem("cart")) || [];
-
+    // Get cart products
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     if (cart.length === 0) {
-
-        alert(
-            "Your cart is empty."
-        );
-
+        alert("Your cart is empty.");
         return;
-
     }
 
+    let total = 0;
 
-    let orderId =
-        "TB" +
-        Math.floor(
-            100000 +
-            Math.random() * 900000
-        );
+    let message = "Hello Thread Bangles! 🛍️\n";
+    message += "I would like to place an order.\n\n";
 
+    message += "ORDER DETAILS:\n";
 
-    localStorage.setItem(
-        "orderId",
-        orderId
-    );
+    cart.forEach(function(item, index) {
 
+        let subtotal = item.price * item.quantity;
+        total += subtotal;
 
-    localStorage.removeItem(
-        "cart"
-    );
+        message += "\n" + (index + 1) + ". " + item.name;
+        message += "\nQuantity: " + item.quantity;
+        message += "\nPrice: ₹" + subtotal + "\n";
 
+    });
 
-    window.location.href =
-        "order-success.html";
+    message += "\nTOTAL: ₹" + total;
+
+    message += "\n\nDELIVERY DETAILS:";
+    message += "\nName: " + name;
+    message += "\nPhone: " + phone;
+    message += "\nAddress: " + address;
+
+    message += "\n\nPlease share the payment details and confirm my order.";
+
+    // Thread Bangles WhatsApp number
+    let whatsappNumber = "919290020050";
+
+    let whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+    // Open WhatsApp
+    window.location.href = whatsappURL;
 }
 
 
