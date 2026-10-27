@@ -1800,3 +1800,196 @@ footer {
         box-sizing: border-box;
     }
 }
+/* PhonePe Test Payment Section */
+
+.phonepe-payment {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f5efff;
+    border: 2px solid #6739b7;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.phonepe-payment h2 {
+    color: #5f259f;
+    margin-bottom: 15px;
+}
+
+.phonepe-payment button {
+    background-color: #5f259f;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.phonepe-payment button:hover {
+    background-color: #481b80;
+}
+
+.phonepe-payment p {
+    margin-top: 12px;
+    color: #555;
+    font-size: 13px;
+}
+/* ===== CHECKOUT PAGE DESIGN ===== */
+
+.checkout-section {
+    max-width: 950px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.checkout-section h1 {
+    text-align: center;
+    font-size: 38px;
+    color: #5b1837;
+    margin-bottom: 35px;
+}
+
+.checkout-box {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-box h2 {
+    color: #5b1837;
+    font-size: 25px;
+    margin: 25px 0 15px;
+}
+
+#checkout-items {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+#checkout-total {
+    color: #5b1837;
+    font-size: 24px;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Delivery Details */
+
+.checkout-box input,
+.checkout-box textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #d8c5ce;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.checkout-box textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.checkout-box input:focus,
+.checkout-box textarea:focus {
+    outline: none;
+    border-color: #5f259f;
+}
+
+/* Place Order Button */
+
+.checkout-box > button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #7b2449;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.checkout-box > button:hover {
+    background: #581733;
+}
+
+/* PhonePe Section */
+
+.checkout-box .phonepe-payment {
+    margin-top: 30px;
+}
+
+.checkout-box .phonepe-payment h2 {
+    color: #5f259f;
+    text-align: center;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+    .checkout-section {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .checkout-box {
+        padding: 20px;
+    }
+
+    .checkout-section h1 {
+        font-size: 30px;
+    }
+}
+/* Checkout Page Navigation */
+
+body:has(.checkout-section) > nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 18px 30px;
+    background-color: #5b1837;
+}
+
+body:has(.checkout-section) > nav h2 {
+    color: white;
+    margin-right: auto;
+    font-size: 26px;
+}
+
+body:has(.checkout-section) > nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+body:has(.checkout-section) > nav a:hover {
+    color: #ffd700;
+}
+
+@media (max-width: 600px) {
+    body:has(.checkout-section) > nav {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    body:has(.checkout-section) > nav h2 {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+}
